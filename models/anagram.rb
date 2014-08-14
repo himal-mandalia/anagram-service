@@ -1,8 +1,8 @@
 class Anagram
   attr_reader :words, :words_hash
   
-  def initialize(file)
-    @words = File.readlines(file).map(&:chomp)
+  def initialize(words = [])
+    @words = words
     create_words_hash
   end
   

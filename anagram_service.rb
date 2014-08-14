@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'json'
 require_relative "models/anagram"
 
-ANAGRAM = Anagram.new("wordlist.txt")
+WORDS = File.readlines("wordlist.txt").map(&:chomp)
 
 class AnagramService < Sinatra::Base
   get "/:words" do
