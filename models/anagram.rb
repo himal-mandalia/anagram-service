@@ -7,7 +7,7 @@ class Anagram
   end
   
   def find(word)
-    @words_hash[word.chars.sort.join][1..-1]
+    @words_hash[word.chars.sort.join] - [word]
   end
   
   private
